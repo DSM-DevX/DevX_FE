@@ -15,7 +15,7 @@ function ImageSlider() {
 
   return (
     <ImageSlideAll>
-      <SlideImgAll translateX={translateX}>
+      <SlideImgAll $translateX={translateX}>
         {/*translateX={translateX}는 translateX에 위에서 받아온 값인 translateX의 값을 넣는 것이다. */}
         <SlidePage src={SlidePage1} alt="이미지 슬라이드 첫 페이지" />
         <SlidePage src={SlidePage2} alt="이미지 슬라이드 두 번째 페이지" />
@@ -30,7 +30,7 @@ const SlidePage = styled.img`
 
 const SlideImgAll = styled.div`
   display: flex;
-  transform: ${({ translateX }) => `translate(${translateX}px, 0)`};
+  transform: ${({ $translateX }) => `translate(${$translateX}px, 0)`};
   transition: transform 2s ease-in-out;
 `;
 
