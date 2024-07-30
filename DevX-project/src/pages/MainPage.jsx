@@ -2,9 +2,13 @@ import styled from "styled-components";
 import HeaderBefore from "../components/HeaderBefore";
 import ImageSlider from "../components/ImageSlider";
 import MainLogo from "../assets/MainLogo.svg";
-import StartBtn from "../components/StartBtn";
+import { useNavigate } from "react-router-dom";
 
 function MainPage() {
+  const navigate = useNavigate();
+  const StartBtnClick = () => {
+    navigate("/DevelopmentStartPage");
+  };
   return (
     <MainAll>
       <HeaderBefore />
@@ -17,12 +21,33 @@ function MainPage() {
           </SubTitle>
         </MainTitleAll>
         <MainStartBtn>
-          <StartBtn />
+          <BtnAll onClick={StartBtnClick}>
+            <BtnContent>시작하기</BtnContent>
+          </BtnAll>
         </MainStartBtn>
       </BtnTitleAll>
     </MainAll>
   );
 }
+
+const BtnContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 400;
+`;
+
+const BtnAll = styled.div`
+  width: 323px;
+  padding: 22px 0px 22px 0px;
+  border-radius: 40px;
+  border: none;
+  background: #9038ff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+`;
 
 const MainStartBtn = styled.div`
   margin-left: 147px;

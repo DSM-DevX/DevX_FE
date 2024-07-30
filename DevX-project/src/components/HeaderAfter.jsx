@@ -1,34 +1,30 @@
 import Logo from "../assets/DevXLogo.svg";
 import styled from "styled-components";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function HeaderAfter() {
-  const [LogClick, setLogClick] = useState("DevelopmentLogTitle");
-  const [MemoClick, setMemoClick] = useState("MemoTitle");
-
-  const DevelopmentLogClicked = () => {
-    setLogClick("ClickDevelopmentLogTitle");
-    setMemoClick("MemoTitle");
+  const navigate = useNavigate();
+  const LogoClick = () => {
+    navigate("/");
   };
 
-  const MemoClicked = () => {
-    setMemoClick("ClickMemoTitle");
-    setLogClick("DevelopmentLogTitle");
+  const DevelopmentLogTitleClick = () => {
+    navigate("/DevelopmentStartPage");
+    // console.log("ss");
+  };
+
+  const MemoTitleClick = () => {
+    navigate("/MemoStartPage");
   };
 
   return (
     <HeaderAll>
-      <LogoImg src={Logo} alt="로고 이미지" />
+      <LogoImg src={Logo} alt="로고 이미지" onClick={LogoClick} />
       <TitleAll>
-        <DevelopmentLogTitle
-          onClick={DevelopmentLogClicked}
-          className={LogClick}
-        >
+        <DevelopmentLogTitle onClick={DevelopmentLogTitleClick}>
           개발 일지
         </DevelopmentLogTitle>
-        <MemoTitle onClick={MemoClicked} className={MemoClick}>
-          메모
-        </MemoTitle>
+        <MemoTitle onClick={MemoTitleClick}>메모</MemoTitle>
       </TitleAll>
     </HeaderAll>
   );
@@ -49,6 +45,7 @@ const ClickDevelopmentLogTitle = styled.div`
 
 const LogoImg = styled.img`
   margin-left: 71px;
+  cursor: pointer;
 `;
 
 const TitleAll = styled.div`
