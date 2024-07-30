@@ -1,7 +1,7 @@
-import DevelopmentStartPage from "./pages/DevelopmentStartPage";
+import Router from "./Router";
 
 function App() {
-  return <DevelopmentStartPage></DevelopmentStartPage>;
+  return <Router />;
 }
 
 export default App;

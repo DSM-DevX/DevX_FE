@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import MemoWriteImg from "../assets/MemoWrite.svg";
+import MemoWriteImg from "../assets/MemoWriteImg.svg";
 
 function MemoWriteBtn() {
   return (
