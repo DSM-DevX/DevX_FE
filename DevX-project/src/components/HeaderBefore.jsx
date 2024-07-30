@@ -11,6 +11,7 @@ function HeaderBefore() {
 
 const LogoImg = styled.img`
   margin-left: 71px;
+  cursor: pointer;
 `;
 
 const HeaderAll = styled.div`
