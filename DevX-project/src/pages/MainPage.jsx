@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import HeaderBefore from "../components/HeaderBefore";
+import HeaderBefore from "../components/Header/HeaderBefore";
 import ImageSlider from "../components/ImageSlider";
 import MainLogo from "../assets/MainLogo.svg";
 import { useNavigate } from "react-router-dom";
