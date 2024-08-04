@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import HeaderAfter from "../components/HeaderAfter";
-import DevelopmentWriteBtn from "../components/DevelopmentWriteBtn";
-import DevelopmentCheckBtn from "../components/DevelopmentCheckBtn";
+import HeaderAfter from "../components/Header/HeaderAfter";
+import DevelopmentWriteBtn from "../components/Button/DevelopmentWriteBtn";
+import DevelopmentCheckBtn from "../components/Button/DevelopmentCheckBtn";
 
 function DevelopmentStartPage() {
   return (
