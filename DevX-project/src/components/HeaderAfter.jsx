@@ -1,8 +1,11 @@
 import Logo from "../assets/DevXLogo.svg";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function HeaderAfter() {
+  const { pathname } = useLocation();
+
   const navigate = useNavigate();
   const LogoClick = () => {
     navigate("/");
@@ -17,31 +20,25 @@ function HeaderAfter() {
     navigate("/MemoStartPage");
   };
 
+  const MemoClick = () => {};
+
   return (
     <HeaderAll>
       <LogoImg src={Logo} alt="로고 이미지" onClick={LogoClick} />
       <TitleAll>
-        <DevelopmentLogTitle onClick={DevelopmentLogTitleClick}>
+        <DevelopmentLogTitle
+          onClick={DevelopmentLogTitleClick}
+          pathname={pathname}
+        >
           개발 일지
         </DevelopmentLogTitle>
-        <MemoTitle onClick={MemoTitleClick}>메모</MemoTitle>
+        <MemoTitle onClick={MemoTitleClick} pathname={pathname}>
+          메모
+        </MemoTitle>
       </TitleAll>
     </HeaderAll>
   );
 }
-
-const ClickMemoTitle = styled.div`
-  font-size: 13px;
-  color: #9038ff;
-  font-weight: 700;
-`;
-
-const ClickDevelopmentLogTitle = styled.div`
-  cursor: pointer;
-  font-size: 13px;
-  color: #9038ff;
-  font-weight: 700;
-`;
 
 const LogoImg = styled.img`
   margin-left: 71px;
@@ -68,6 +65,20 @@ const MemoTitle = styled.div`
     color: #9038ff;
     font-weight: 700;
   }
+  /* color: ${({ pathname }) =>
+    pathname === "/MemoStartPage" ? "#9038ff" : "#111111"}; */
+  ${({ pathname }) =>
+    pathname === "/MemoStartPage"
+      ? css`
+          color: #9038ff;
+          font-weight: 700;
+        `
+      : css`
+          color: #111111;
+          :hover {
+            color: #9038ff;
+          }
+        `}
 `;
 
 const DevelopmentLogTitle = styled.div`
@@ -82,6 +93,18 @@ const DevelopmentLogTitle = styled.div`
     color: #9038ff;
     font-weight: 700;
   }
+  ${({ pathname }) =>
+    pathname === "/DevelopmentStartPage"
+      ? css`
+          color: #9038ff;
+          font-weight: 700;
+        `
+      : css`
+          color: #111111;
+          :hover {
+            color: #9038ff;
+          }
+        `}
 `;
 
 const HeaderAll = styled.div`
