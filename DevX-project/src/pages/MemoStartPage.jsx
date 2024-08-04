@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import HeaderAfter from "../components/HeaderAfter";
-import MemoCheckBtn from "../components/MemoCheckBtn";
-import MemoWriteBtn from "../components/MemoWriteBtn";
-
-
+import HeaderAfter from "../components/Header/HeaderAfter";
+import MemoCheckBtn from "../components/Button/MemoCheckBtn";
+import MemoWriteBtn from "../components/Button/MemoWriteBtn";
 
 function MemoStartPage() {
   return (
