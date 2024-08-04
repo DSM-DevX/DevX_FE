@@ -1,4 +1,4 @@
-import Logo from "../assets/DevXLogo.svg";
+import Logo from "../../assets/DevXLogo.svg";
 import styled from "styled-components";
 
 function HeaderBefore() {

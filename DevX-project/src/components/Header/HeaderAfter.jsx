@@ -1,4 +1,4 @@
-import Logo from "../assets/DevXLogo.svg";
+import Logo from "../../assets/DevXLogo.svg";
 import styled, { css } from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -68,7 +68,7 @@ const MemoTitle = styled.div`
   /* color: ${({ pathname }) =>
     pathname === "/MemoStartPage" ? "#9038ff" : "#111111"}; */
   ${({ pathname }) =>
-    pathname === "/MemoStartPage"
+    pathname.includes("Memo")
       ? css`
           color: #9038ff;
           font-weight: 700;
@@ -94,7 +94,7 @@ const DevelopmentLogTitle = styled.div`
     font-weight: 700;
   }
   ${({ pathname }) =>
-    pathname === "/DevelopmentStartPage"
+    pathname.includes("Development")
       ? css`
           color: #9038ff;
           font-weight: 700;

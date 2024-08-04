@@ -1,13 +1,20 @@
 import styled from "styled-components";
 import MemoWriteImg from "../../assets/MemoWriteImg.svg";
+import { useNavigate } from "react-router-dom";
 
 function MemoWriteBtn() {
+  const navigate = useNavigate();
+
+  const MemoWriteClick = () => {
+    navigate("/MemoWritePage");
+  };
+
   return (
     <CheckBtnWindowAll>
       <img src={MemoWriteImg} alt="일지 작성 이미지" />
       <CheckBtnText>메모를 정리해보세요</CheckBtnText>
       <BtnAll>
-        <BtnContent>메모 작성하기</BtnContent>
+        <BtnContent onClick={MemoWriteClick}>메모 작성하기</BtnContent>
       </BtnAll>
     </CheckBtnWindowAll>
   );
