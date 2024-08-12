@@ -13,8 +13,8 @@ function MemoWriteBtn() {
     <CheckBtnWindowAll>
       <img src={MemoWriteImg} alt="일지 작성 이미지" />
       <CheckBtnText>메모를 정리해보세요</CheckBtnText>
-      <BtnAll>
-        <BtnContent onClick={MemoWriteClick}>메모 작성하기</BtnContent>
+      <BtnAll onClick={MemoWriteClick}>
+        <BtnContent>메모 작성하기</BtnContent>
       </BtnAll>
     </CheckBtnWindowAll>
   );
