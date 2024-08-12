@@ -2,16 +2,23 @@ import styled from "styled-components";
 import HeaderAfter from "../components/Header/HeaderAfter";
 import MemoCheckBtn from "../components/Button/MemoCheckBtn";
 import MemoWriteBtn from "../components/Button/MemoWriteBtn";
+import { motion } from "framer-motion";
 
 function MemoStartPage() {
   return (
-    <StartPageAll>
-      <HeaderAfter />
-      <BtnAll>
-        <MemoWriteBtn />
-        <MemoCheckBtn />
-      </BtnAll>
-    </StartPageAll>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <StartPageAll>
+        <HeaderAfter />
+        <BtnAll>
+          <MemoWriteBtn />
+          <MemoCheckBtn />
+        </BtnAll>
+      </StartPageAll>
+    </motion.div>
   );
 }
 

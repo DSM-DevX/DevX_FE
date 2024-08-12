@@ -3,6 +3,7 @@ import HeaderBefore from "../components/Header/HeaderBefore";
 import ImageSlider from "../components/ImageSlider";
 import MainLogo from "../assets/MainLogo.svg";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function MainPage() {
   const navigate = useNavigate();
@@ -10,23 +11,29 @@ function MainPage() {
     navigate("/DevelopmentStartPage");
   };
   return (
-    <MainAll>
-      <HeaderBefore />
-      <ImageSlider />
-      <BtnTitleAll>
-        <MainTitleAll>
-          <LogoTitle src={MainLogo} alt="메인화면 로고 이미지" />
-          <SubTitle>
-            편리하고 깔끔한 개발일지 관리, 지금 바로 시작해보세요!
-          </SubTitle>
-        </MainTitleAll>
-        <MainStartBtn>
-          <BtnAll onClick={StartBtnClick}>
-            <BtnContent>시작하기</BtnContent>
-          </BtnAll>
-        </MainStartBtn>
-      </BtnTitleAll>
-    </MainAll>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <MainAll>
+        <HeaderBefore />
+        <ImageSlider />
+        <BtnTitleAll>
+          <MainTitleAll>
+            <LogoTitle src={MainLogo} alt="메인화면 로고 이미지" />
+            <SubTitle>
+              편리하고 깔끔한 개발일지 관리, 지금 바로 시작해보세요!
+            </SubTitle>
+          </MainTitleAll>
+          <MainStartBtn>
+            <BtnAll onClick={StartBtnClick}>
+              <BtnContent>시작하기</BtnContent>
+            </BtnAll>
+          </MainStartBtn>
+        </BtnTitleAll>
+      </MainAll>
+    </motion.div>
   );
 }
 

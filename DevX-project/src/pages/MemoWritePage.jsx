@@ -2,21 +2,28 @@ import styled from "styled-components";
 import MemoWrite from "../components/Memo/MemoWrite";
 import HeaderAfter from "../components/Header/HeaderAfter";
 import CompletedBtn from "../components/Button/CompletedBtn";
+import { motion } from "framer-motion";
 
 function MemoWritePage() {
   return (
-    <MemoWritePageAll>
-      <HeaderAfter />
-      <MemoWriteAll>
-        <MemoWriteContents>
-          <MemoWriteTitle>메모 작성하기</MemoWriteTitle>
-          <MemoWrite />
-        </MemoWriteContents>
-        <CompletedDiv>
-          <CompletedBtn />
-        </CompletedDiv>
-      </MemoWriteAll>
-    </MemoWritePageAll>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <MemoWritePageAll>
+        <HeaderAfter />
+        <MemoWriteAll>
+          <MemoWriteContents>
+            <MemoWriteTitle>메모 작성하기</MemoWriteTitle>
+            <MemoWrite />
+          </MemoWriteContents>
+          <CompletedDiv>
+            <CompletedBtn />
+          </CompletedDiv>
+        </MemoWriteAll>
+      </MemoWritePageAll>
+    </motion.div>
   );
 }
 
