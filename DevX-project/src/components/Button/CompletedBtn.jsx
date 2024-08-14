@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-function CompletedBtn() {
+export const CompletedBtn = () => {
   return (
     <BtnAll>
       <BtnContent>작성완료</BtnContent>
     </BtnAll>
   );
-}
+};
 
 const BtnContent = styled.div`
   display: flex;
@@ -26,5 +26,3 @@ const BtnAll = styled.div`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 `;
-
-export default CompletedBtn;
