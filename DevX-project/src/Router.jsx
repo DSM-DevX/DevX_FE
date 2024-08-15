@@ -4,6 +4,7 @@ import MemoStartPage from "./pages/MemoStartPage";
 import MainPage from "./pages/MainPage";
 import MemoWritePage from "./pages/MemoWritePage";
 import { AnimatePresence } from "framer-motion";
+import { DevelopmentWritePage } from "./pages/DevelopmentWritePage";
 
 function Router() {
   return (
@@ -17,6 +18,10 @@ function Router() {
           />
           <Route path="/MemoStartPage" element={<MemoStartPage />} />
           <Route path="/MemoWritePage" element={<MemoWritePage />} />
+          <Route
+            path="/DevelopmentWritePage"
+            element={<DevelopmentWritePage />}
+          />
         </Routes>
       </BrowserRouter>
     </AnimatePresence>

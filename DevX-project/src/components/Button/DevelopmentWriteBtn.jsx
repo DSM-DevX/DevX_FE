@@ -1,12 +1,19 @@
 import styled from "styled-components";
 import DevelopmentWriteImg from "../../assets/DevelopmentWriteImg.svg";
+import { useNavigate } from "react-router-dom";
 
 function DevelopmentWriteBtn() {
+  const navigate = useNavigate();
+
+  const DevelopmentWriteClick = () => {
+    navigate("/DevelopmentWritePage");
+  };
+
   return (
     <CheckBtnWindowAll>
       <img src={DevelopmentWriteImg} alt="일지 작성 이미지" />
       <CheckBtnText>내가 만든 프로젝트를 정리해보세요</CheckBtnText>
-      <BtnAll>
+      <BtnAll onClick={DevelopmentWriteClick}>
         <BtnContent>일지 작성하기</BtnContent>
       </BtnAll>
     </CheckBtnWindowAll>
