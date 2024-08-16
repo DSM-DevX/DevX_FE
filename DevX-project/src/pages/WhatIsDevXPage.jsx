@@ -1,23 +1,30 @@
 import styled from "styled-components";
 import { HeaderBefore } from "../components/Header/HeaderBefore";
 import MainLogo from "../assets/MainLogo.svg";
+import { motion } from "framer-motion";
 
 export const WhatIsDevXPage = () => {
   return (
-    <WhatIsDevXContainer>
-      <HeaderBefore />
-      <ContentsAll>
-        <SubContainer1>
-          <DescriptionWindow>간단한 메모 작성하기</DescriptionWindow>
-          <DescriptionWindow>포트폴리오 보관하기</DescriptionWindow>
-        </SubContainer1>
-        <DevXMainImg src={MainLogo} />
-        <SubContainer2>
-          <DescriptionWindow>개발일지 작성하기</DescriptionWindow>
-          <DescriptionWindow>개발일지 관리하기</DescriptionWindow>
-        </SubContainer2>
-      </ContentsAll>
-    </WhatIsDevXContainer>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <WhatIsDevXContainer>
+        <HeaderBefore />
+        <ContentsAll>
+          <SubContainer1>
+            <DescriptionWindow>간단한 메모 작성하기</DescriptionWindow>
+            <DescriptionWindow>포트폴리오 보관하기</DescriptionWindow>
+          </SubContainer1>
+          <DevXMainImg src={MainLogo} />
+          <SubContainer2>
+            <DescriptionWindow>개발일지 작성하기</DescriptionWindow>
+            <DescriptionWindow>개발일지 관리하기</DescriptionWindow>
+          </SubContainer2>
+        </ContentsAll>
+      </WhatIsDevXContainer>
+    </motion.div>
   );
 };
 
@@ -50,6 +57,7 @@ const WhatIsDevXContainer = styled.div`
   align-items: start;
   width: 100vw;
   height: 100%;
+  background-color: #fcfcfc;
 `;
 
 const ContentsAll = styled.div`
