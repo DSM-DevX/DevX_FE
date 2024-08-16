@@ -2,8 +2,15 @@ import styled from "styled-components";
 import SlidePage1 from "../assets/imageslide1.svg";
 import SlidePage2 from "../assets/imageslide2.svg";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-function ImageSlider() {
+export const ImageSlider = () => {
+  const navigate = useNavigate();
+
+  const SecondImgClick = () => {
+    navigate("/WhatIsDevXPage");
+  };
+
   const [translateX, setTranslateX] = useState(0);
 
   useEffect(() => {
@@ -18,11 +25,15 @@ function ImageSlider() {
       <SlideImgAll $translateX={translateX}>
         {/*translateX={translateX}는 translateX에 위에서 받아온 값인 translateX의 값을 넣는 것이다. */}
         <SlidePage src={SlidePage1} alt="이미지 슬라이드 첫 페이지" />
-        <SlidePage src={SlidePage2} alt="이미지 슬라이드 두 번째 페이지" />
+        <SlidePage
+          src={SlidePage2}
+          alt="이미지 슬라이드 두 번째 페이지"
+          onClick={SecondImgClick}
+        />
       </SlideImgAll>
     </ImageSlideAll>
   );
-}
+};
 
 const SlidePage = styled.img`
   cursor: pointer;
@@ -38,5 +49,3 @@ const ImageSlideAll = styled.div`
   width: 100vw;
   overflow: hidden;
 `;
-
-export default ImageSlider;

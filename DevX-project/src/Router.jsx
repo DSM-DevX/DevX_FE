@@ -1,12 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import DevelopmentStartPage from "./pages/DevelopmentStartPage";
-import MemoStartPage from "./pages/MemoStartPage";
-import MainPage from "./pages/MainPage";
-import MemoWritePage from "./pages/MemoWritePage";
+import { DevelopmentStartPage } from "./pages/DevelopmentStartPage";
+import { MemoStartPage } from "./pages/MemoStartPage";
+import { MainPage } from "./pages/MainPage";
+import { MemoWritePage } from "./pages/MemoWritePage";
 import { AnimatePresence } from "framer-motion";
 import { DevelopmentWritePage } from "./pages/DevelopmentWritePage";
+import { WhatIsDevXPage } from "./pages/WhatIsDevXPage";
 
-function Router() {
+export const Router = () => {
   return (
     <AnimatePresence>
       <BrowserRouter>
@@ -22,10 +23,9 @@ function Router() {
             path="/DevelopmentWritePage"
             element={<DevelopmentWritePage />}
           />
+          <Route path="/WhatIsDevXPage" element={<WhatIsDevXPage />} />
         </Routes>
       </BrowserRouter>
     </AnimatePresence>
   );
-}
-
-export default Router;
+};

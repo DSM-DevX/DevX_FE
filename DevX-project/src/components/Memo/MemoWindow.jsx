@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
-function MemoWindow() {
+export const MemoWindow = () => {
   return (
     <All>
-      <MemoAll>
-        <MemoContents></MemoContents>
-      </MemoAll>
+      <MemoAll></MemoAll>
     </All>
   );
-}
+};
 
 const MemoContents = styled.div`
   font-size: 17px;
@@ -31,5 +29,3 @@ const All = styled.div`
   justify-content: center;
   width: 100vw;
 `;
-
-export default MemoWindow;

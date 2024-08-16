@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import HeaderBefore from "../components/Header/HeaderBefore";
-import ImageSlider from "../components/ImageSlider";
+import { HeaderBefore } from "../components/Header/HeaderBefore";
+import { ImageSlider } from "../components/ImageSlider";
 import MainLogo from "../assets/MainLogo.svg";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function MainPage() {
+export const MainPage = () => {
   const navigate = useNavigate();
   const StartBtnClick = () => {
     navigate("/DevelopmentStartPage");
@@ -35,7 +35,7 @@ function MainPage() {
       </MainAll>
     </motion.div>
   );
-}
+};
 
 const BtnContent = styled.div`
   display: flex;
@@ -90,4 +90,3 @@ const MainAll = styled.div`
   height: 100vh;
 `;
 
-export default MainPage;

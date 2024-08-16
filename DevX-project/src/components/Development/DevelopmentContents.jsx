@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-function DevelopmentContents() {
+export const DevelopmentContents = () => {
   return (
     <DevelopmentContentsAll>
       <DateDiv>
@@ -43,4 +43,3 @@ const DateDiv = styled.div`
   padding: 19px 60px;
 `;
 
-export default DevelopmentContents;

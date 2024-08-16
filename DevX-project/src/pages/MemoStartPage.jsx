@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import HeaderAfter from "../components/Header/HeaderAfter";
-import MemoCheckBtn from "../components/Button/MemoCheckBtn";
-import MemoWriteBtn from "../components/Button/MemoWriteBtn";
+import { HeaderAfter } from "../components/Header/HeaderAfter";
+import { MemoCheckBtn } from "../components/Button/MemoCheckBtn";
+import { MemoWriteBtn } from "../components/Button/MemoWriteBtn";
 import { motion } from "framer-motion";
 
-function MemoStartPage() {
+export const MemoStartPage = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -20,7 +20,7 @@ function MemoStartPage() {
       </StartPageAll>
     </motion.div>
   );
-}
+};
 
 const StartPageAll = styled.div`
   display: flex;
@@ -38,5 +38,3 @@ const BtnAll = styled.div`
   width: 100%;
   height: 100%;
 `;
-
-export default MemoStartPage;
