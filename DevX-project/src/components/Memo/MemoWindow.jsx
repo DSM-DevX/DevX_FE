@@ -3,9 +3,7 @@ import styled from "styled-components";
 export const MemoWindow = () => {
   return (
     <All>
-      <MemoAll>
-        <MemoContents></MemoContents>
-      </MemoAll>
+      <MemoAll></MemoAll>
     </All>
   );
 };
