@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DevelopmentStartPage } from "./pages/DevelopmentStartPage";
 import { MemoStartPage } from "./pages/MemoStartPage";
