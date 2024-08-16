@@ -11,6 +11,10 @@ export const ImageSlider = () => {
     navigate("/WhatIsDevXPage");
   };
 
+  const FirstImgClick = () => {
+    navigate("/GuideDevXPage");
+  };
+
   const [translateX, setTranslateX] = useState(0);
 
   useEffect(() => {
@@ -24,7 +28,11 @@ export const ImageSlider = () => {
     <ImageSlideAll>
       <SlideImgAll $translateX={translateX}>
         {/*translateX={translateX}는 translateX에 위에서 받아온 값인 translateX의 값을 넣는 것이다. */}
-        <SlidePage src={SlidePage1} alt="이미지 슬라이드 첫 페이지" />
+        <SlidePage
+          src={SlidePage1}
+          alt="이미지 슬라이드 첫 페이지"
+          onClick={FirstImgClick}
+        />
         <SlidePage
           src={SlidePage2}
           alt="이미지 슬라이드 두 번째 페이지"
