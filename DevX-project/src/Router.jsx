@@ -5,6 +5,7 @@ import { MainPage } from "./pages/MainPage";
 import { MemoWritePage } from "./pages/MemoWritePage";
 import { AnimatePresence } from "framer-motion";
 import { DevelopmentWritePage } from "./pages/DevelopmentWritePage";
+import { WhatIsDevXPage } from "./pages/WhatIsDevXPage";
 
 export const Router = () => {
   return (
@@ -22,9 +23,9 @@ export const Router = () => {
             path="/DevelopmentWritePage"
             element={<DevelopmentWritePage />}
           />
+          <Route path="/WhatIsDevXPage" element={<WhatIsDevXPage />} />
         </Routes>
       </BrowserRouter>
     </AnimatePresence>
   );
 };
-
