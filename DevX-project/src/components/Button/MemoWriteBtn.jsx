@@ -2,7 +2,7 @@ import styled from "styled-components";
 import MemoWriteImg from "../../assets/MemoWriteImg.svg";
 import { useNavigate } from "react-router-dom";
 
-function MemoWriteBtn() {
+export const MemoWriteBtn = () => {
   const navigate = useNavigate();
 
   const MemoWriteClick = () => {
@@ -18,7 +18,7 @@ function MemoWriteBtn() {
       </BtnAll>
     </CheckBtnWindowAll>
   );
-}
+};
 
 const CheckBtnText = styled.div`
   color: #000;
@@ -58,5 +58,3 @@ const BtnAll = styled.div`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 `;
-
-export default MemoWriteBtn;

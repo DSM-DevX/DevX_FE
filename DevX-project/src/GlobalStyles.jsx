@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   * {
   border: 0px;
   margin: 0px;
@@ -25,5 +25,3 @@ const GlobalStyles = createGlobalStyle`
 
 // if (scrollbars == flex) {
 // }
-
-export default GlobalStyles;
