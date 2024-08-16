@@ -88,5 +88,5 @@ const MainAll = styled.div`
   justify-content: start;
   align-items: start;
   height: 100vh;
+  background-color: #fcfcfc;
 `;
-

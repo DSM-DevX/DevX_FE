@@ -12,6 +12,7 @@ export const ResultContainer = () => {
 };
 
 const ResultAll = styled.div`
+  background-color: #ffffff;
   width: 1714px;
   height: 277px;
   display: flex;
