@@ -1,20 +1,11 @@
-<<<<<<< Updated upstream
-import Router from "./Router";
-import GlobalStyles from "./GlobalStyles";
+import { Router } from "./Router";
+import { GlobalStyles } from "./GlobalStyles";
 
-function App() {
+export const App = () => {
   return (
     <>
       <GlobalStyles />
       <Router />
     </>
   );
-=======
-import { Router } from "./Router";
-
-function App() {
-  return <Router />;
->>>>>>> Stashed changes
-}
-
-export default App;
+};

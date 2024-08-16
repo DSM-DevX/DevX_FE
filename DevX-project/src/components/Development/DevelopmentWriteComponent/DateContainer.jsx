@@ -12,6 +12,7 @@ export const DateContainer = () => {
 };
 
 const DateAll = styled.div`
+  background-color: #ffffff;
   width: 1714px;
   height: 64px;
   display: flex;
@@ -21,7 +22,7 @@ const DateAll = styled.div`
   border-top: 0;
 `;
 
-const DateLabel = styled. label`
+const DateLabel = styled.label`
   margin-left: 40px;
   font-size: 17px;
 `;
@@ -30,7 +31,6 @@ const DateInput = styled.input`
   &::-webkit-calendar-picker-indicator {
     position: absolute;
     right: 30px;
-    
   }
 
   position: relative;

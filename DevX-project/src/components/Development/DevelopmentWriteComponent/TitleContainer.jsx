@@ -12,6 +12,7 @@ export const TitleContainer = () => {
 };
 
 const TitleAll = styled.div`
+  background-color: #ffffff;
   width: 1714px;
   height: 64px;
   display: flex;
