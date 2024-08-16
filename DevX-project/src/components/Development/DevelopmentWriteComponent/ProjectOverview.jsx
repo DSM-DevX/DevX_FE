@@ -12,6 +12,7 @@ export const ProjectOverview = () => {
 };
 
 const ProjectOverviewAll = styled.div`
+  background-color: #ffffff;
   width: 1714px;
   height: 193px;
   display: flex;

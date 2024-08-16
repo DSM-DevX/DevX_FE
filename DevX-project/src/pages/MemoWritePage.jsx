@@ -35,6 +35,7 @@ const MemoWritePageAll = styled.div`
   gap: 32px;
   height: 100vh;
   overflow-x: hidden;
+  background-color: #fcfcfc;
 `;
 
 const MemoWriteContents = styled.div`

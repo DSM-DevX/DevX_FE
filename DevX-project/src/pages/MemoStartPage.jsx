@@ -28,6 +28,7 @@ const StartPageAll = styled.div`
   justify-content: start;
   align-items: start;
   height: 100vh;
+  background-color: #fcfcfc;
 `;
 
 const BtnAll = styled.div`
