@@ -4,6 +4,8 @@ import { ImageSlider } from "../components/ImageSlider";
 import MainLogo from "../assets/MainLogo.svg";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import React from 'react';
+
 
 export const MainPage = () => {
   const navigate = useNavigate();

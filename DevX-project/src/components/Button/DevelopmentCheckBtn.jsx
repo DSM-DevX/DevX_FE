@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import DevelopmentCheckImg from "../../assets/DevelopmentCheckImg.svg";
+import React from 'react';
 
 export const DevelopmentCheckBtn = () => {
   return (

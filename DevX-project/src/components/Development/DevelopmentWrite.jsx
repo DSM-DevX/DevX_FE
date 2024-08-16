@@ -6,6 +6,7 @@ import { ProgressContainer } from "./DevelopmentWriteComponent/ProgressContainer
 import { IssuesContainer } from "./DevelopmentWriteComponent/IssuesContainer";
 import { ResultContainer } from "./DevelopmentWriteComponent/ResultContainer";
 import { DevelopmentMemo } from "./DevelopmentWriteComponent/DevelopmentMemo";
+import React from 'react';
 
 export const DevelopmentWrite = () => {
   return (

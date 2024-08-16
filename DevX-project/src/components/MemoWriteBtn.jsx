@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import MemoWriteImg from "../assets/MemoWrite.svg";
+import React from 'react';
 
-function MemoWriteBtn() {
+export const MemoWriteBtn = () => {
   return (
     <CheckBtnWindowAll>
       <img src={MemoWriteImg} alt="일지 작성 이미지" />
@@ -11,7 +12,7 @@ function MemoWriteBtn() {
       </BtnAll>
     </CheckBtnWindowAll>
   );
-}
+};
 
 const CheckBtnText = styled.div`
   color: #000;
@@ -51,5 +52,3 @@ const BtnAll = styled.div`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 `;
-
-export default MemoWriteBtn;

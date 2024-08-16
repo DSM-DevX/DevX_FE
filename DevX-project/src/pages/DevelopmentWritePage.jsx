@@ -3,6 +3,7 @@ import { DevelopmentWrite } from "./../components/Development/DevelopmentWrite";
 import { motion } from "framer-motion";
 import { HeaderAfter } from "../components/Header/HeaderAfter";
 import { CompletedBtn } from "../components/Button/CompletedBtn";
+import React from 'react';
 
 export const DevelopmentWritePage = () => {
   return (
