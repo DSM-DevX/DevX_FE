@@ -1,10 +1,16 @@
 import Logo from "../../assets/DevXLogo.svg";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 export const HeaderBefore = () => {
+  const navigate = useNavigate();
+  const LogoClick = () => {
+    navigate("/");
+  };
+
   return (
     <HeaderAll>
-      <LogoImg src={Logo} alt="로고 이미지" />
+      <LogoImg src={Logo} alt="로고 이미지" onClick={LogoClick} />
     </HeaderAll>
   );
 };
