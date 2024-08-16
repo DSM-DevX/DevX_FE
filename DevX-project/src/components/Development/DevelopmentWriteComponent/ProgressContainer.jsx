@@ -15,6 +15,7 @@ export const ProgressContainer = () => {
 };
 
 const ProgressAll = styled.div`
+  background-color: #ffffff;
   width: 1714px;
   height: 193px;
   display: flex;

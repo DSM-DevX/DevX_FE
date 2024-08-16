@@ -2,7 +2,7 @@ import styled from "styled-components";
 import DevelopmentWriteImg from "../../assets/DevelopmentWriteImg.svg";
 import { useNavigate } from "react-router-dom";
 
-function DevelopmentWriteBtn() {
+export const DevelopmentWriteBtn = () => {
   const navigate = useNavigate();
 
   const DevelopmentWriteClick = () => {
@@ -18,7 +18,7 @@ function DevelopmentWriteBtn() {
       </BtnAll>
     </CheckBtnWindowAll>
   );
-}
+};
 
 const CheckBtnText = styled.div`
   color: #000;
@@ -58,5 +58,3 @@ const BtnAll = styled.div`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 `;
-
-export default DevelopmentWriteBtn;

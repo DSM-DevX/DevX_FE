@@ -1,16 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-function MemoWrite() {
-  const [memoWrite, setMemoWrite] = useState("");
-  return (
-    <MemoWriteAll
-      placeholder="간단한 메모를 남겨보세요"
-      memoWrite={memoWrite}
-      setMemoWrite={setMemoWrite}
-    />
-  );
-}
+
+export const MemoWrite = () => {
+  return <MemoWriteAll placeholder="간단한 메모를 남겨보세요" />;
+};
 
 const MemoWriteAll = styled.textarea`
   padding: 52px 63px 52px 63px;
@@ -28,4 +22,3 @@ const MemoWriteAll = styled.textarea`
   }
 `;
 
-export default MemoWrite;

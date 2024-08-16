@@ -15,6 +15,7 @@ export const DevelopmentMemo = () => {
 };
 
 const MemoAll = styled.div`
+  background-color: #ffffff;
   width: 1714px;
   height: 142px;
   display: flex;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { DevelopmentWrite } from "./../components/Development/DevelopmentWrite";
 import { motion } from "framer-motion";
-import HeaderAfter from "../components/Header/HeaderAfter";
+import { HeaderAfter } from "../components/Header/HeaderAfter";
 import { CompletedBtn } from "../components/Button/CompletedBtn";
 
 export const DevelopmentWritePage = () => {
@@ -50,6 +50,7 @@ const WritePageContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 37px;
+  background-color: #fcfcfc;
 `;
 
 const WriteTitle = styled.h3`

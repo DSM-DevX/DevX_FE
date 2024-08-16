@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import MemoCheckImg from "../../assets/MemoCheckImg.svg";
 
-function MemoCheckBtn() {
+export const MemoCheckBtn = () => {
   return (
     <CheckBtnWindowAll>
       <img src={MemoCheckImg} alt="일지 확인 이미지" />
@@ -11,7 +11,7 @@ function MemoCheckBtn() {
       </BtnAll>
     </CheckBtnWindowAll>
   );
-}
+};
 
 const CheckBtnText = styled.div`
   color: #000;
@@ -51,5 +51,3 @@ const BtnAll = styled.div`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 `;
-
-export default MemoCheckBtn;

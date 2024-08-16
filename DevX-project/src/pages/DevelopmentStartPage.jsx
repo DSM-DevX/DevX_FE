@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import HeaderAfter from "../components/Header/HeaderAfter";
-import DevelopmentWriteBtn from "../components/Button/DevelopmentWriteBtn";
-import DevelopmentCheckBtn from "../components/Button/DevelopmentCheckBtn";
+import { HeaderAfter } from "../components/Header/HeaderAfter";
+import { DevelopmentWriteBtn } from "../components/Button/DevelopmentWriteBtn";
+import { DevelopmentCheckBtn } from "../components/Button/DevelopmentCheckBtn";
 import { motion } from "framer-motion";
 
-function DevelopmentStartPage() {
+export const DevelopmentStartPage = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -20,7 +20,7 @@ function DevelopmentStartPage() {
       </StartPageAll>
     </motion.div>
   );
-}
+};
 
 const StartPageAll = styled.div`
   display: flex;
@@ -28,6 +28,7 @@ const StartPageAll = styled.div`
   justify-content: start;
   align-items: start;
   height: 100vh;
+  background-color: #fcfcfc;
 `;
 
 const BtnAll = styled.div`
@@ -38,5 +39,3 @@ const BtnAll = styled.div`
   width: 100%;
   height: 100%;
 `;
-
-export default DevelopmentStartPage;

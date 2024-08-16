@@ -1,13 +1,14 @@
-<<<<<<< Updated upstream
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import DevelopmentStartPage from "./pages/DevelopmentStartPage";
-import MemoStartPage from "./pages/MemoStartPage";
-import MainPage from "./pages/MainPage";
-import MemoWritePage from "./pages/MemoWritePage";
+import { DevelopmentStartPage } from "./pages/DevelopmentStartPage";
+import { MemoStartPage } from "./pages/MemoStartPage";
+import { MainPage } from "./pages/MainPage";
+import { MemoWritePage } from "./pages/MemoWritePage";
 import { AnimatePresence } from "framer-motion";
 import { DevelopmentWritePage } from "./pages/DevelopmentWritePage";
+import { WhatIsDevXPage } from "./pages/WhatIsDevXPage";
+import { GuideDevXPage } from "./pages/GuideDevXPage";
 
-function Router() {
+export const Router = () => {
   return (
     <AnimatePresence>
       <BrowserRouter>
@@ -23,23 +24,10 @@ function Router() {
             path="/DevelopmentWritePage"
             element={<DevelopmentWritePage />}
           />
+          <Route path="/WhatIsDevXPage" element={<WhatIsDevXPage />} />
+          <Route path="/GuideDevXPage" element={<GuideDevXPage />} />
         </Routes>
       </BrowserRouter>
     </AnimatePresence>
   );
-}
-
-export default Router;
-=======
-import MemoStartPage from "./pages/MemoStartPage";
-import DevelopmentStartPage from "./pages/DevelopmentStartPage";
-import MainPage from "./pages/MainPage";
-
-export const Router = () => {
-  return (
-  <Router>
-    <Route
-  </Router>
-  );
 };
->>>>>>> Stashed changes
