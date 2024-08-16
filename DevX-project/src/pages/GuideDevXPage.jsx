@@ -10,6 +10,7 @@ import MemoStartImg from "../assets/MemoStartPage.svg";
 import MemoWriteImg from "../assets/MemoWritePage.svg";
 import MemoCheckImg from "../assets/MemoCheckPage.svg";
 import { motion } from "framer-motion";
+import React from 'react';
 
 export const GuideDevXPage = () => {
   return (

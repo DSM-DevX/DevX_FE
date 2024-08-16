@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import MemoCheckImg from "../../assets/MemoCheckImg.svg";
+import React from 'react';
 
 export const MemoCheckBtn = () => {
   return (

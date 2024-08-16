@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import MemoWriteImg from "../../assets/MemoWriteImg.svg";
 import { useNavigate } from "react-router-dom";
+import React from 'react';
 
 export const MemoWriteBtn = () => {
   const navigate = useNavigate();

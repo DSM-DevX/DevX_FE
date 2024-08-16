@@ -3,6 +3,7 @@ import SlidePage1 from "../assets/imageslide1.svg";
 import SlidePage2 from "../assets/imageslide2.svg";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import React from 'react';
 
 export const ImageSlider = () => {
   const navigate = useNavigate();

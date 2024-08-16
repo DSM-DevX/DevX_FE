@@ -3,6 +3,7 @@ import { HeaderAfter } from "../components/Header/HeaderAfter";
 import { DevelopmentWriteBtn } from "../components/Button/DevelopmentWriteBtn";
 import { DevelopmentCheckBtn } from "../components/Button/DevelopmentCheckBtn";
 import { motion } from "framer-motion";
+import React from 'react';
 
 export const DevelopmentStartPage = () => {
   return (
