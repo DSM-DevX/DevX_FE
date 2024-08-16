@@ -1,4 +1,5 @@
 import styled from "styled-components";
+<<<<<<< Updated upstream
 import HeaderAfter from "../components/Header/HeaderAfter";
 import MemoCheckBtn from "../components/Button/MemoCheckBtn";
 import MemoWriteBtn from "../components/Button/MemoWriteBtn";
@@ -19,6 +20,23 @@ function MemoStartPage() {
         </BtnAll>
       </StartPageAll>
     </motion.div>
+=======
+import HeaderAfter from "../components/HeaderAfter";
+import MemoCheckBtn from "../components/MemoCheckBtn";
+import MemoWriteBtn from "../components/MemoWriteBtn";
+
+
+
+function MemoStartPage() {
+  return (
+    <StartPageAll>
+      <HeaderAfter />
+      <BtnAll>
+        <MemoWriteBtn />
+        <MemoCheckBtn />
+      </BtnAll>
+    </StartPageAll>
+>>>>>>> Stashed changes
   );
 }
 

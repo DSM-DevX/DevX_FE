@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DevelopmentStartPage from "./pages/DevelopmentStartPage";
 import MemoStartPage from "./pages/MemoStartPage";
@@ -29,3 +30,16 @@ function Router() {
 }
 
 export default Router;
+=======
+import MemoStartPage from "./pages/MemoStartPage";
+import DevelopmentStartPage from "./pages/DevelopmentStartPage";
+import MainPage from "./pages/MainPage";
+
+export const Router = () => {
+  return (
+  <Router>
+    <Route
+  </Router>
+  );
+};
+>>>>>>> Stashed changes
