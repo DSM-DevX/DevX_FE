@@ -50,6 +50,7 @@ const WritePageContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 37px;
+  background-color: #fcfcfc;
 `;
 
 const WriteTitle = styled.h3`
