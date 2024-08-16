@@ -3,13 +3,10 @@ import styled from "styled-components";
 function MemoWindow() {
   return (
     <All>
-      <MemoAll>
-        <MemoContents></MemoContents>
-      </MemoAll>
+      <MemoAll></MemoAll>
     </All>
   );
 }
-
 const MemoContents = styled.div`
   font-size: 17px;
   font-weight: 400;

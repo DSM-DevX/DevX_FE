@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import MemoWrite from "../components/Memo/MemoWrite";
 import HeaderAfter from "../components/Header/HeaderAfter";
-import CompletedBtn from "../components/Button/CompletedBtn";
+import { CompletedBtn } from "../components/Button/CompletedBtn";
 import { motion } from "framer-motion";
 
 function MemoWritePage() {
