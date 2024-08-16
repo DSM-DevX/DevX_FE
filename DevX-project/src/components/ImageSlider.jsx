@@ -3,7 +3,7 @@ import SlidePage1 from "../assets/imageslide1.svg";
 import SlidePage2 from "../assets/imageslide2.svg";
 import { useState, useEffect } from "react";
 
-function ImageSlider() {
+export const ImageSlider = () => {
   const [translateX, setTranslateX] = useState(0);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function ImageSlider() {
       </SlideImgAll>
     </ImageSlideAll>
   );
-}
+};
 
 const SlidePage = styled.img`
   cursor: pointer;
@@ -38,5 +38,3 @@ const ImageSlideAll = styled.div`
   width: 100vw;
   overflow: hidden;
 `;
-
-export default ImageSlider;

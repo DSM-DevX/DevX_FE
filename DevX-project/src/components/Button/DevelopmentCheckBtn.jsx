@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import DevelopmentCheckImg from "../../assets/DevelopmentCheckImg.svg";
 
-function DevelopmentCheckBtn() {
+export const DevelopmentCheckBtn = () => {
   return (
     <CheckBtnWindowAll>
       <img src={DevelopmentCheckImg} alt="일지 확인 이미지" />
@@ -11,7 +11,7 @@ function DevelopmentCheckBtn() {
       </BtnAll>
     </CheckBtnWindowAll>
   );
-}
+};
 
 const CheckBtnText = styled.div`
   color: #000;
@@ -52,4 +52,4 @@ const BtnAll = styled.div`
   cursor: pointer;
 `;
 
-export default DevelopmentCheckBtn;
+

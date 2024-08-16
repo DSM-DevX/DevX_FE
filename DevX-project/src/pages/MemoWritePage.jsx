@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import MemoWrite from "../components/Memo/MemoWrite";
-import HeaderAfter from "../components/Header/HeaderAfter";
+import { MemoWrite } from "../components/Memo/MemoWrite";
+import { HeaderAfter } from "../components/Header/HeaderAfter";
 import CompletedBtn from "../components/Button/CompletedBtn";
 import { motion } from "framer-motion";
 
-function MemoWritePage() {
+export const MemoWritePage = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -25,7 +25,7 @@ function MemoWritePage() {
       </MemoWritePageAll>
     </motion.div>
   );
-}
+};
 
 const MemoWritePageAll = styled.div`
   width: calc(100vw - 8px);
@@ -63,5 +63,3 @@ const MemoWriteTitle = styled.h3`
 const CompletedDiv = styled.div`
   margin-bottom: 78px;
 `;
-
-export default MemoWritePage;

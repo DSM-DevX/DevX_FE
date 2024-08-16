@@ -1,13 +1,13 @@
 import Logo from "../../assets/DevXLogo.svg";
 import styled from "styled-components";
 
-function HeaderBefore() {
+export const HeaderBefore = () => {
   return (
     <HeaderAll>
       <LogoImg src={Logo} alt="로고 이미지" />
     </HeaderAll>
   );
-}
+};
 
 const LogoImg = styled.img`
   margin-left: 71px;
@@ -23,5 +23,3 @@ const HeaderAll = styled.div`
   background: #fff;
   box-shadow: 0px 0px 8px 0px #e3e3e3;
 `;
-
-export default HeaderBefore;
