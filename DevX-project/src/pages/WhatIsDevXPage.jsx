@@ -1,8 +1,8 @@
+import React from "react";
 import styled from "styled-components";
 import { HeaderBefore } from "../components/Header/HeaderBefore";
 import MainLogo from "../assets/MainLogo.svg";
 import { motion } from "framer-motion";
-import React from "react";
 
 export const WhatIsDevXPage = () => {
   return (

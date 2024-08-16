@@ -1,6 +1,6 @@
+import React from 'react';
 import styled from "styled-components";
 import MemoWriteImg from "../assets/MemoWrite.svg";
-import React from 'react';
 
 export const MemoWriteBtn = () => {
   return (

@@ -1,7 +1,7 @@
+import React from 'react';
 import Logo from "../../assets/DevXLogo.svg";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import React from 'react';
 
 export const HeaderBefore = () => {
   const navigate = useNavigate();

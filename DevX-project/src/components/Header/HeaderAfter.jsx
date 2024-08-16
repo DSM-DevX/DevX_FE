@@ -1,8 +1,8 @@
+import React from 'react';
 import Logo from "../../assets/DevXLogo.svg";
 import styled, { css } from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import React from 'react';
 
 export const HeaderAfter = () => {
   const { pathname } = useLocation();

@@ -22,6 +22,3 @@ export const GlobalStyles = createGlobalStyle`
 
 
 `;
-
-// if (scrollbars == flex) {
-// }

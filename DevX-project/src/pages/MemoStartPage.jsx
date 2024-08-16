@@ -1,9 +1,9 @@
+import React from 'react';
 import styled from "styled-components";
 import { HeaderAfter } from "../components/Header/HeaderAfter";
 import { MemoCheckBtn } from "../components/Button/MemoCheckBtn";
 import { MemoWriteBtn } from "../components/Button/MemoWriteBtn";
 import { motion } from "framer-motion";
-import React from 'react';
 
 export const MemoStartPage = () => {
   return (

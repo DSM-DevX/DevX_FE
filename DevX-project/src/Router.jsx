@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DevelopmentStartPage } from "./pages/DevelopmentStartPage";
 import { MemoStartPage } from "./pages/MemoStartPage";
@@ -7,8 +8,6 @@ import { AnimatePresence } from "framer-motion";
 import { DevelopmentWritePage } from "./pages/DevelopmentWritePage";
 import { WhatIsDevXPage } from "./pages/WhatIsDevXPage";
 import { GuideDevXPage } from "./pages/GuideDevXPage";
-import React from 'react';
-
 
 export const Router = () => {
   return (

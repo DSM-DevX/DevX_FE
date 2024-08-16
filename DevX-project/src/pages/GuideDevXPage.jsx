@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components";
 import { HeaderBefore } from "../components/Header/HeaderBefore";
 import Title from "../assets/GuideDevXTitle.svg";
@@ -10,7 +11,6 @@ import MemoStartImg from "../assets/MemoStartPage.svg";
 import MemoWriteImg from "../assets/MemoWritePage.svg";
 import MemoCheckImg from "../assets/MemoCheckPage.svg";
 import { motion } from "framer-motion";
-import React from 'react';
 
 export const GuideDevXPage = () => {
   return (
