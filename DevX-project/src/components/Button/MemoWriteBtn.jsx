@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import MemoWriteImg from "../../assets/MemoWriteImg.svg";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../Button";
 
 export const MemoWriteBtn = () => {
   const navigate = useNavigate();
@@ -14,9 +15,7 @@ export const MemoWriteBtn = () => {
     <CheckBtnWindowAll>
       <img src={MemoWriteImg} alt="일지 작성 이미지" />
       <CheckBtnText>메모를 정리해보세요</CheckBtnText>
-      <BtnAll onClick={MemoWriteClick}>
-        <BtnContent>메모 작성하기</BtnContent>
-      </BtnAll>
+      <Button value={"메모 작성하기"} onClick={MemoWriteClick} />
     </CheckBtnWindowAll>
   );
 };
@@ -40,22 +39,4 @@ const CheckBtnWindowAll = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 33px;
-`;
-
-const BtnContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 23px;
-  font-weight: 400;
-`;
-
-const BtnAll = styled.div`
-  padding: 19px 112px 20px 113px;
-  border-radius: 40px;
-  border: none;
-  background: #9038ff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
 `;

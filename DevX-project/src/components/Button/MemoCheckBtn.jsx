@@ -1,15 +1,21 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import MemoCheckImg from "../../assets/MemoCheckImg.svg";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../Button";
 
 export const MemoCheckBtn = () => {
+  const navigate = useNavigate();
+
+  const MemoWriteClick = () => {
+    navigate("/MemoCheckPage");
+  };
+
   return (
     <CheckBtnWindowAll>
       <img src={MemoCheckImg} alt="일지 확인 이미지" />
       <CheckBtnText>내가 작성한 메모를 확인해보세요</CheckBtnText>
-      <BtnAll>
-        <BtnContent>메모 확인하기</BtnContent>
-      </BtnAll>
+      <Button value={"메모 확인하기"} onClick={MemoWriteClick} />
     </CheckBtnWindowAll>
   );
 };
@@ -33,22 +39,4 @@ const CheckBtnWindowAll = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 33px;
-`;
-
-const BtnContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 23px;
-  font-weight: 400;
-`;
-
-const BtnAll = styled.div`
-  padding: 19px 112px 20px 113px;
-  border-radius: 40px;
-  border: none;
-  background: #9038ff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
 `;

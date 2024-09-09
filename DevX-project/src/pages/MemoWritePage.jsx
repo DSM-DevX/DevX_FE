@@ -1,11 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { MemoWrite } from "../components/Memo/MemoWrite";
 import { HeaderAfter } from "../components/Header/HeaderAfter";
 import { CompletedBtn } from "../components/Button/CompletedBtn";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import uuid from "react-uuid";
 
-export const MemoWritePage = () => {
+export const MemoWritePage = ({}) => {
+  const navigate = useNavigate();
+
+  const [memo, setMemo] = useState([]);
+  const [value, setValue] = useState("");
+
+  //로컬 스토리지에 저장하는 부분입니다.
+  useEffect(() => {
+    if (memo.length > 0) {
+      localStorage.setItem("value", value);
+    }
+  }, [value]);
+
+  const completeClick = () => {
+    if (value !== "") {
+      const newMemo = {
+        id: uuid(),
+        content: value,
+      };
+
+      const memoSend = [...memo, newMemo];
+      setMemo(memoSend);
+      setValue(""); // value값 초기화해줌
+      navigate("/MemoCheckPage", { state: { memo: memoSend } });
+    }
+    //value값 보내줌 (MemoCheckPage에)
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -14,13 +43,17 @@ export const MemoWritePage = () => {
     >
       <MemoWritePageAll>
         <HeaderAfter />
+
         <MemoWriteAll>
           <MemoWriteContents>
             <MemoWriteTitle>메모 작성하기</MemoWriteTitle>
-            <MemoWrite />
+            <MemoWrite
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+            />
           </MemoWriteContents>
           <CompletedDiv>
-            <CompletedBtn />
+            <CompletedBtn onClick={completeClick} />
           </CompletedDiv>
         </MemoWriteAll>
       </MemoWritePageAll>
@@ -45,7 +78,7 @@ const MemoWriteContents = styled.div`
   gap: 38px;
 `;
 
-const MemoWriteAll = styled.div`
+const MemoWriteAll = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;

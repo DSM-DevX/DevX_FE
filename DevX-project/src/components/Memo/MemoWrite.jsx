@@ -1,11 +1,25 @@
-import React from 'react';
+import React from "react";
+import { useCallback } from "react";
 import { useState } from "react";
 import styled from "styled-components";
 
+export const MemoWrite = ({ value, onChange }) => {
+  // const onSubmit = useCallback(
+  //   (e) => {
+  //     setMemo("");
 
+  //     e.preventDefault();
+  //   },
+  //   [memo]
+  // );
 
-export const MemoWrite = () => {
-  return <MemoWriteAll placeholder="간단한 메모를 남겨보세요" />;
+  return (
+    <MemoWriteAll
+      placeholder="간단한 메모를 남겨보세요"
+      value={value}
+      onChange={onChange}
+    />
+  );
 };
 
 const MemoWriteAll = styled.textarea`
@@ -23,4 +37,3 @@ const MemoWriteAll = styled.textarea`
     font-size: 17px;
   }
 `;
-

@@ -1,13 +1,20 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
-export const MemoWindow = () => {
+export const MemoWindow = ({ value }) => {
   return (
     <All>
-      <MemoAll></MemoAll>
+      <MemoAll>
+        <Text>{value.content}</Text>
+      </MemoAll>
     </All>
   );
 };
+
+const Text = styled.p`
+  overflow-wrap: break-word;
+  width: 100%;
+`;
 
 const MemoContents = styled.div`
   font-size: 17px;

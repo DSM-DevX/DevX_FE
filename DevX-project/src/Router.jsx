@@ -8,6 +8,7 @@ import { AnimatePresence } from "framer-motion";
 import { DevelopmentWritePage } from "./pages/DevelopmentWritePage";
 import { WhatIsDevXPage } from "./pages/WhatIsDevXPage";
 import { GuideDevXPage } from "./pages/GuideDevXPage";
+import { MemoCheckPage } from "./pages/MemoCheckPage";
 
 export const Router = () => {
   return (
@@ -21,6 +22,7 @@ export const Router = () => {
           />
           <Route path="/MemoStartPage" element={<MemoStartPage />} />
           <Route path="/MemoWritePage" element={<MemoWritePage />} />
+          <Route path="/MemoCheckPage" element={<MemoCheckPage />} />
           <Route
             path="/DevelopmentWritePage"
             element={<DevelopmentWritePage />}
