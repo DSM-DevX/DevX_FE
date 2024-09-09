@@ -1,24 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-export const CompletedBtn = () => {
-  return (
-    <BtnAll>
-      <BtnContent>작성완료</BtnContent>
-    </BtnAll>
-  );
+export const CompletedBtn = ({ onClick }) => {
+  return <BtnContent onClick={onClick} type="submit" value="작성완료" />;
 };
 
-const BtnContent = styled.div`
+const BtnContent = styled.input`
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   font-size: 23px;
   font-weight: 400;
-`;
-
-const BtnAll = styled.div`
   width: 323px;
   padding: 19px 0px 20px 0px;
   border-radius: 40px;
