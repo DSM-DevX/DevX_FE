@@ -8,28 +8,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "../components/Button";
 
-export const MemoCheckPage = ({ value }) => {
-  const location = useLocation();
-  const { memo = [] } = location.state || {}; //전달된 상태를 받아온다
-  const [getMemo, setGetMemo] = useState([]);
-
-  //로컬에 저장된 값을 받아온다
-  useEffect(() => {
-    const localValue = localStorage.getItem("value");
-
-    if (localValue) {
-      setGetMemo(JSON.parse(localValue));
-    }
-  }, []);
-
-  //새로운 메모가 있다면 로컬 스토리지에 저장할 것
-  useEffect(() => {
-    if (memo.length > 0) {
-      const updateMemo = [...getMemo, ...memo];
-      localStorage.setItem("value", JSON.stringify(updateMemo));
-      setGetMemo(updateMemo);
-    }
-  }, [memo]);
+export const MemoCheckPage = () => {
+  const [getMemo, setGetMemo] = useState(
+    localStorage.getItem("value")?.split(" ") || [] //로컬스토리지에 있는 값을 가져와 배열로 만듦 -> 초깃값으로 설정
+  );
 
   const navigate = useNavigate();
 
@@ -44,8 +26,8 @@ export const MemoCheckPage = ({ value }) => {
         <Button value={"메모 추가하기"} onClick={memoAddClick} />
       </BtnContainer>
       <ListAll>
-        {memo.length > 0 ? (
-          memo.map((memo) => (
+        {getMemo.length > 0 ? (
+          getMemo.map((memo) => (
             <li key={memo.id}>
               <MemoWindow value={memo} />
             </li>

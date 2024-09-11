@@ -5,7 +5,7 @@ export const MemoWindow = ({ value }) => {
   return (
     <All>
       <MemoAll>
-        <Text>{value.content}</Text>
+        <Text>{value}</Text>
       </MemoAll>
     </All>
   );

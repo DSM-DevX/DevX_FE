@@ -7,32 +7,22 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import uuid from "react-uuid";
 
-export const MemoWritePage = ({}) => {
+export const MemoWritePage = () => {
   const navigate = useNavigate();
 
-  const [memo, setMemo] = useState([]);
   const [value, setValue] = useState("");
+  const [memo, setMemo] = useState([]);
+  const data = localStorage.getItem("value")
+    ? `${localStorage.getItem("value")} ${value}` //로컬스토리지에서 들어있는 데이터값 가져오기
+    : value;
 
-  //로컬 스토리지에 저장하는 부분입니다.
-  useEffect(() => {
-    if (memo.length > 0) {
-      localStorage.setItem("value", value);
-    }
-  }, [value]);
+  const valueMemo = [];
 
   const completeClick = () => {
-    if (value !== "") {
-      const newMemo = {
-        id: uuid(),
-        content: value,
-      };
+    localStorage.setItem("value", data); //데이터값을 저장함
 
-      const memoSend = [...memo, newMemo];
-      setMemo(memoSend);
-      setValue(""); // value값 초기화해줌
-      navigate("/MemoCheckPage", { state: { memo: memoSend } });
-    }
-    //value값 보내줌 (MemoCheckPage에)
+    setValue(""); // value값 초기화해줌
+    navigate("/MemoCheckPage");
   };
 
   return (
