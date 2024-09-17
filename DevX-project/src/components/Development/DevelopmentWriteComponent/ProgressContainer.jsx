@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
-export const ProgressContainer = () => {
+export const ProgressContainer = ({ value }) => {
   return (
     <>
       <ProgressAll>
@@ -9,6 +9,8 @@ export const ProgressContainer = () => {
         <ProgressInput
           type="text"
           placeholder="프로젝트 진행 상황에 대해 작성해주세요"
+          value={value}
+          
         />
       </ProgressAll>
     </>

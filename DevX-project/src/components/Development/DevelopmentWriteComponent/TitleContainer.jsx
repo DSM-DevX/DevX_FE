@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
-export const TitleContainer = () => {
+export const TitleContainer = ({ value }) => {
   return (
     <>
       <TitleAll>
         <TitleLabel>제목</TitleLabel>
-        <TitleInput type="text" placeholder="제목을 입력하세요" />
+        <TitleInput type="text" placeholder="제목을 입력하세요" value={value} />
       </TitleAll>
     </>
   );

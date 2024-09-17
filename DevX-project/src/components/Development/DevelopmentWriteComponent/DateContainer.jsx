@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
-export const DateContainer = () => {
+export const DateContainer = ({ value }) => {
   return (
     <>
       <DateAll>
         <DateLabel>날짜</DateLabel>
-        <DateInput type="Date" placeholder="날짜를 입력하세요" />
+        <DateInput type="Date" placeholder="날짜를 입력하세요" value={value} />
       </DateAll>
     </>
   );
