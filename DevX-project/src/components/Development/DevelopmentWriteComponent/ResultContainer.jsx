@@ -1,12 +1,17 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
-export const ResultContainer = () => {
+export const ResultContainer = ({ value }) => {
   return (
     <>
       <ResultAll>
         <ResultLabel>결과물</ResultLabel>
-        <ResultInput type="text" placeholder="결과물에 대해 작성해주세요" />
+        <ResultInput
+          type="text"
+          placeholder="결과물에 대해 작성해주세요"
+          value={value}
+          
+        />
       </ResultAll>
     </>
   );

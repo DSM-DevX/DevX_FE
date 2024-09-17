@@ -1,12 +1,17 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
-export const ProjectOverview = () => {
+export const ProjectOverview = ({ value }) => {
   return (
     <>
       <ProjectOverviewAll>
         <ProjectOverviewLabel>프로젝트 개요</ProjectOverviewLabel>
-        <ProjectOverviewInput type="text" placeholder="제목을 입력하세요" />
+        <ProjectOverviewInput
+          type="text"
+          placeholder="제목을 입력하세요"
+          value={value}
+          
+        />
       </ProjectOverviewAll>
     </>
   );

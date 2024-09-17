@@ -10,6 +10,7 @@ import { DevelopmentWritePage } from "./pages/DevelopmentWritePage";
 import { WhatIsDevXPage } from "./pages/WhatIsDevXPage";
 import { GuideDevXPage } from "./pages/GuideDevXPage";
 import { MemoCheckPage } from "./pages/MemoCheckPage";
+import { DevelopmentCheckPage } from "./pages/DevelopmentCheckPage";
 
 export const Router = () => {
   return (
@@ -27,6 +28,10 @@ export const Router = () => {
           <Route
             path="/DevelopmentWritePage"
             element={<DevelopmentWritePage />}
+          />
+          <Route
+            path="/DevelopmentCheckPage"
+            element={<DevelopmentCheckPage />}
           />
           <Route path="/WhatIsDevXPage" element={<WhatIsDevXPage />} />
           <Route path="/GuideDevXPage" element={<GuideDevXPage />} />

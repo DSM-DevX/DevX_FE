@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export const DevelopmentMemo = () => {
+export const DevelopmentMemo = ({ value }) => {
   return (
     <>
       <MemoAll>
@@ -9,6 +9,8 @@ export const DevelopmentMemo = () => {
         <MemoInput
           type="text"
           placeholder="프로젝트에 대해 메모할 것이 있다면 작성해주세요"
+          value={value}
+          
         />
       </MemoAll>
     </>
